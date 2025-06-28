@@ -1,0 +1,11 @@
+@plugin "daisyui";
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+.heading {
+  font-family: 'Inter', 'sans-serif';
+  font-weight: 700; /* or 900 for extra bold */
+}
+  
