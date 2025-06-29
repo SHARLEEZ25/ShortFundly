@@ -27,13 +27,13 @@ function App() {
         {/* Open Graph tags for LinkedIn/Facebook */}
         <meta property="og:title" content="Sharleez | Web Developer" />
         <meta property="og:description" content="Front-end web developer crafting seamless user experiences. Explore my projects, skills, and how I help brands go digital." />
-        <meta property="og:image" content="https://yourdomain.com/your-image.jpg" />
+        <meta property="og:image" content="\myphoto.webp" />
         <meta property="og:url" content="https://yourdomain.com/" />
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sharleez | Web Developer" />
         <meta name="twitter:description" content="Front-end web developer crafting seamless user experiences. Explore my projects, skills, and how I help brands go digital." />
-        <meta name="twitter:image" content="https://yourdomain.com/your-image.jpg" />
+        <meta name="twitter:image" content="\myphoto.webp" />
       </Helmet>
       <header>
         <nav className="navbar !bg-gray-900 shadow-sm flex items-center justify-between" aria-label="Main navigation">
