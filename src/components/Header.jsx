@@ -1,4 +1,5 @@
 import react from "react";
+import { Link } from "react-router-dom";
 
 const Head = () =>{
     return (
@@ -15,7 +16,18 @@ const Head = () =>{
                 />
               </div>
             </div>
-            <a href="/" className="btn btn-ghost text-xl text-white font-bold" aria-label="Homepage">Sharleez</a>
+            <Link 
+              to="/"
+              onClick={() => {
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 100);
+              }}
+              className="btn btn-ghost text-xl text-white font-bold"
+              aria-label="Homepage"
+            >
+              Sharleez
+            </Link>
           </div>
           <div className="dropdown dropdown-end md:hidden">
             
@@ -25,20 +37,126 @@ const Head = () =>{
               </svg>
             </label>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-900 rounded-box w-52">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#work">Work</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    setTimeout(() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 100);
+                  }}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    setTimeout(() => {
+                      const workSection = document.getElementById('work');
+                      if (workSection) {
+                        workSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }}
+                >
+                  Work
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    setTimeout(() => {
+                      const servicesSection = document.getElementById('services');
+                      if (servicesSection) {
+                        servicesSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }}
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    setTimeout(() => {
+                      const contactSection = document.getElementById('contact');
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }}
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Right side - Navigation */}
           <nav className = "hidden md:block ">
             <ul className="menu menu-horizontal px-8 gap-5 text-size-2xl">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#work">Work</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    setTimeout(() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 100);
+                  }}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    setTimeout(() => {
+                      const workSection = document.getElementById('work');
+                      if (workSection) {
+                        workSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }}
+                >
+                  Work
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    setTimeout(() => {
+                      const servicesSection = document.getElementById('services');
+                      if (servicesSection) {
+                        servicesSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }}
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/"
+                  onClick={() => {
+                    setTimeout(() => {
+                      const contactSection = document.getElementById('contact');
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }}
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </nav>
         </nav>

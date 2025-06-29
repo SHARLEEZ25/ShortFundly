@@ -81,10 +81,10 @@ function App() {
       <main id = "home" className="flex flex-col items-center justify-center min-h-[100vh] bg-black">
         <div className="w-full max-w-5xl mt-0">
           <div data-scroll data-scroll-speed="2">
-            <h1 className="text-white font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-8">
+            <h1 className="text-white font-bold text-2xl sm:text-2xl md:text-6xl leading-tight mb-8">
               I'm Sharleez Fathima <span className="inline-block align-middle">—</span> <br className="hidden sm:block" />
               a front-end developer and UX strategist.<br  />
-              <span className="font-normal text-gray-300 text-2xl sm:text-1xl md:text-3xl">
+              <span className="block font-normal text-gray-300 text-base sm:text-xl md:text-3xl mt-2 sm:mt-4">
                 I help growing businesses and startups build clean and high-converting websites through strategic design, conversion-focused copywriting and technical SEO.
               </span>
             </h1>
@@ -106,7 +106,13 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Card 1 */}
             <div className="bg-amber-700 rounded-3xl shadow-xl flex flex-col items-center p-8 transition-transform duration-400 transform hover:scale-105 hover:shadow-2xl">
-              <Link to = "./Thework">
+              <Link to = "./Thework"
+              onClick ={() => {
+                setTimeout(()=>{
+                  window.scrollTo({top: 0, behavior: 'smooth'});
+                },100);
+              }}
+              >
               <img
                 src="/mockup.webp"
                 alt="Provenance"
@@ -124,7 +130,7 @@ function App() {
             {/* Card 2 */}
             <div className="bg-[#3ec28f] rounded-3xl shadow-xl flex flex-col items-center p-8 transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
              
-              <h3 className="text-2xl font-bold text-white mb-2 text-left w-full">Personal Project</h3>
+              <h3 className="text-2xl font-bold text-white mb-2 text-left w-full">Client Project</h3>
               <p className="text-md text-gray-200 mb-4 w-full text-left">will be live soon</p>
               <span className="self-end">
                 <svg width="32" height="32" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24">
@@ -142,58 +148,55 @@ function App() {
         <div className="max-w-8xl mx-auto px-4 flex flex-col items-center">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-10 text-center">Services I Provide</h2>
 
-          <div className="w-full flex flex-col items-center">
+          <div className="flex flex-col md:flex-row justify-center gap-8 mb-8 w-full">
             {/* Top row: two cards */}
-            <div className="flex justify-center gap-8 mb-8">
+            <div className="bg-black/90 border border-gray-400 rounded-3xl p-6 sm:p-10 w-full max-w-5xl mx-auto mb-8">
+              {/* Box Heading */}
+              <h3 className="text-4xl font-bold text-white mb-8 text-center">Website Design & Development</h3>
+              {/* Centered lists below heading */}
             
-            <div className="bg-black/90 border border-gray-400 rounded-3xl p-10 max-w-5xl mx-auto mb-10">
-          {/* Box Heading */}
-          <h3 className="text-4xl font-bold text-white mb-8 text-center">Website Design & Development</h3>
-          {/* Centered lists below heading */}
-        
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-white text-lg">
-              <ul className="space-y-4 list-disc list-inside">
-                <li>Landing Pages </li>
-                <li>Business Websites </li>
-                <li>UI Development</li>
-                <li>Basic CMS Setup</li>
-                <li>Speed & SEO Basics</li>
-              </ul>
-             
-            </div>
-          </div>
-             <div className="bg-black/90 border border-gray-400 rounded-3xl p-10 max-w-5xl mx-auto mb-10 text-start">
-              <h3 className="text-4xl font-bold text-white mb-8 text-center">UX Strategy & Copywriting</h3>
-          {/* Centered lists below heading */}
-        
-            <div className="grid grid-cols-2 md:grid-cols-2 gap-8 text-white text-lg">
-              <ul className="space-y-4 list-disc list-inside">
-                <li>Section Planning & Page Flow </li>
-                <li>Clear CTAs</li>
-                <li>Microcopy & Headlines</li>
-                <li>SEO-Friendly Copy</li>
-                <li>Structure optimized for skim-readers</li>
-              </ul>
-             
-            </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white text-base sm:text-lg">
+                <ul className="space-y-4 list-disc list-inside">
+                  <li>Landing Pages </li>
+                  <li>Business Websites </li>
+                  <li>UI Development</li>
+                  <li>Basic CMS Setup</li>
+                  <li>Speed & SEO Basics</li>
+                </ul>
+               
               </div>
             </div>
-            {/* Bottom row: one card centered */}
-            <div className="flex justify-center">
-            <div className="bg-black/90 border border-gray-400 rounded-3xl p-10 max-w-5xl mx-auto mb-10">
-              <h3 className="text-4xl font-bold text-white mb-8 text-center">Technical SEO</h3>
-          {/* Centered lists below heading */}
-        
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-white text-lg">
-              <ul className="space-y-4 list-disc list-inside">
-                <li> On-Page SEO Structure </li>
-                <li> Performance Optimization</li>
-                <li>Mobile-Friendly Best Practices</li>
-                <li>Basic Indexing Setup</li>
-                
-              </ul>
-             
+            <div className="bg-black/90 border border-gray-400 rounded-3xl p-6 sm:p-10 w-full max-w-5xl mx-auto mb-8 text-start">
+              <h3 className="text-4xl font-bold text-white mb-8 text-center">UX Strategy & Copywriting</h3>
+              {/* Centered lists below heading */}
+            
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white text-base sm:text-lg">
+                <ul className="space-y-4 list-disc list-inside">
+                  <li>Section Planning & Page Flow </li>
+                  <li>Clear CTAs</li>
+                  <li>Microcopy & Headlines</li>
+                  <li>SEO-Friendly Copy</li>
+                  <li>Structure optimized for skim-readers</li>
+                </ul>
+               
+              </div>
             </div>
+          </div>
+          {/* Bottom row: one card centered */}
+          <div className="flex justify-center">
+            <div className="bg-black/90 border border-gray-400 rounded-3xl p-6 sm:p-10 w-full max-w-5xl mx-auto mb-8">
+              <h3 className="text-4xl font-bold text-white mb-8 text-center">Technical SEO</h3>
+              {/* Centered lists below heading */}
+            
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white text-base sm:text-lg">
+                <ul className="space-y-4 list-disc list-inside">
+                  <li> On-Page SEO Structure </li>
+                  <li> Performance Optimization</li>
+                  <li>Mobile-Friendly Best Practices</li>
+                  <li>Basic Indexing Setup</li>
+                  
+                </ul>
+               
               </div>
             </div>
           </div>
@@ -205,11 +208,11 @@ function App() {
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-8 text-center">Contact Me</h2>
           <form 
             className="flex flex-col gap-6"
-            data-netlify="true"
             name="contact"
             method="POST"
+            data-netlify="true"
             netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
+            action="/"
           >
             {/* Hidden input for Netlify */}
             <input type="hidden" name="form-name" value="contact" />
@@ -296,17 +299,16 @@ function App() {
         </div>
       </section>
 
-      <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-30">
-  <nav className="grid grid-flow-col gap-4">
-    <a href  ="/" className="link link-hover">Home</a>
-    <a href = "#work" className="link link-hover">My Work</a>
-    <a href="#contact" className="text-white text-base hover:underline transition">Contact</a>
-  </nav>
-  
-  <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by Sharleez Fathima</p>
-  </aside>
-</footer>
+      <footer className="footer bg-base-200 text-base-content rounded p-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-between sm:p-10">
+        <nav className="flex flex-col items-center gap-2 sm:flex-row sm:gap-6">
+          <a href="/" className="link link-hover">Home</a>
+          <a href="#work" className="link link-hover">My Work</a>
+          <a href="#contact" className="text-white text-base hover:underline transition">Contact</a>
+        </nav>
+        <aside className="text-center sm:text-right">
+          <p>Copyright © {new Date().getFullYear()} - All right reserved by Sharleez Fathima</p>
+        </aside>
+      </footer>
     </>
   )
 }
